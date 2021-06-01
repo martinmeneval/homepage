@@ -1,0 +1,50 @@
+{% extends "base.j2" %}
+
+{% block content %}
+
+<body>
+    <div class="container is-max-desktop">
+        <div class="columns">
+            <div class="column p-6">
+                <a class="" href="{{ url_for('home') }}">
+                    <img src="/static/logo.png" alt="Menev.al">
+                </a>
+            </div>
+            <div class="column is-three-fifths">
+            </div>
+        </div>
+        <section class="section">
+            <h1 class="title ">Welcome</h1>
+            <p>My name is <span class="accent">Martin Meneval</span></p>
+        </section>
+        <section class="section">
+            <h1 class="title">About me</h1>
+            <p>My name is <span class="accent">Martin Meneval</span></p>
+        </section>
+        <section class="section">
+            <h1 class="title">Resume</h1>
+            <div id="resume">{% include 'resume.j2' %}</div>
+        </section>
+        <section class="section">
+            <h1 class="title">About this website</h1>
+            <div class="block">While I love learning new skills, and deep-diving into fresh domains, I'm by and
+                large not a web developer. I wanted to keep this personal home page as simple as possible, for ease
+                of
+                developement and maintenance. As such, I gave myself the challenge to not make use of any
+                Javascript.
+            </div>
+            <div class="block">As such, I'm using the Bulma CSS framework, and the website itself is running through
+                a simple Flask app. The whole code can be found on my GitHub.</div>
+        </section>
+    </div>
+</body>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            Menev<strong class="accent">.</strong>al by Martin Meneval. The source code and website content are licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+        </p>
+    </div>
+</footer>
+{% endblock %}

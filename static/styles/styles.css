@@ -1,0 +1,38 @@
+/* .navbar-item img {
+    max-height: 3rem
+} */
+.accent {
+    color: #0bc;
+}
+.title {
+    text-decoration: underline;
+    text-decoration-color: #0bc;
+    text-underline-offset: 0.6rem;
+}
+
+.is-accent {
+    background-color: #0bc;
+    color: #fff;
+    border-radius: 4px;
+    position: relative;
+    padding: 1rem 2rem 1rem 1.2rem;
+}
+
+.fa {
+    color:#0bc
+}
+.hero-body {
+    padding: 1.5rem 0.75rem;
+}
+
+/* .qrcode {
+    max-width: 60%;
+} */
+/* .container {
+    background-color: white;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+}
+
+body {
+    background-color: lightgrey;
+} */
