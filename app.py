@@ -10,6 +10,10 @@ def home():
 def li():
     return flask.redirect("https://www.linkedin.com/in/martin-meneval/")
 
+@app.route("/gh")
+def gh():
+    return flask.redirect("https://github.com/martinmeneval")
+
 @app.route("/resume")
 def resume():
     return flask.render_template("resume.j2")
