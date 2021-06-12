@@ -13,3 +13,10 @@ def li():
 @app.route("/resume")
 def resume():
     return flask.render_template("resume.j2")
+
+@app.route("/dl_resume")
+def dl_resume():
+    return flask.send_file("static/resume.pdf",
+                     mimetype='application/pdf',
+                     attachment_filename='Resume_Martin_Meneval.pdf',
+                     as_attachment=True)
