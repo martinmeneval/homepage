@@ -45,3 +45,10 @@ homepage
 Made on [QRCode Monkey](https://www.qrcode-monkey.com).  
 Color #0bc  
 Downloaded at 2000x2000, background removed, borders cut, downscaled to 256x256
+
+### Run locally
+
+```bash
+pip install -r requirements.txt
+uvicorn --port 8080 app:app --reload
+```
