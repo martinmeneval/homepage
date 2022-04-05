@@ -28,6 +28,7 @@ async def redirect_gh():
 async def dl_resume():
     return FileResponse("static/resume.pdf",
                      media_type="application/pdf",
-                     filename="Resume_Martin_Meneval.pdf",
-                     headers={"Content-Disposition": "attachment"}
+                     headers={
+                         "Content-Disposition": "attachment; filename=Resume_Martin_Meneval.pdf"
+                         }
                      )
