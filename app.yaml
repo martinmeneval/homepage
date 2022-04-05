@@ -1,5 +1,5 @@
 runtime: python39
-entrypoint: uvicorn -b :$PORT app:app
+entrypoint: uvicorn --port 8080 app:app
 handlers:
 - url: /.*
   script: auto
