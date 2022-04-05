@@ -130,7 +130,3 @@ dmypy.json
 
 # Vscode settings
 .vscode
-
-# External dependencies
-static/styles/bulma
-static/styles/Fork-Awesome*
