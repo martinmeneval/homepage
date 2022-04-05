@@ -1,26 +1,33 @@
-import flask
+from fastapi import FastAPI, Request
 
-app = flask.Flask(__name__)
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
+from fastapi.responses import RedirectResponse, FileResponse
 
-@app.route("/")
-def home():
-    return flask.render_template("home.j2")
+app = FastAPI()
+app.mount("/static", StaticFiles(directory="static"), name="static")
+templates = Jinja2Templates("templates")
 
-@app.route("/li")
-def li():
-    return flask.redirect("https://www.linkedin.com/in/martin-meneval/")
+@app.get("/")
+async def render_home(request: Request):
+    return templates.TemplateResponse("home.j2", {"request": request})
 
-@app.route("/gh")
-def gh():
-    return flask.redirect("https://github.com/martinmeneval")
+@app.get("/resume")
+async def render_resume(request: Request):
+    return templates.TemplateResponse("resume.j2", {"request": request})
 
-@app.route("/resume")
-def resume():
-    return flask.render_template("resume.j2")
+@app.get("/li")
+async def redirect_li():
+    return RedirectResponse("https://www.linkedin.com/in/martin-meneval/")
 
-@app.route("/dl_resume")
-def dl_resume():
-    return flask.send_file("static/resume.pdf",
-                     mimetype='application/pdf',
-                     attachment_filename='Resume_Martin_Meneval.pdf',
-                     as_attachment=True)
+@app.get("/gh")
+async def redirect_gh():
+    return RedirectResponse("https://github.com/martinmeneval")
+
+@app.get("/dl_resume")
+async def dl_resume():
+    return FileResponse("static/resume.pdf",
+                     media_type="application/pdf",
+                     filename="Resume_Martin_Meneval.pdf",
+                     headers={"Content-Disposition": "attachment"}
+                     )
