@@ -13,6 +13,8 @@ homepage
 │   app.py
 │   app.yaml            # Run instructions for App Engine
 │   cloudbuild.yaml     # Default build steps for Cloud Build
+│   Pipfile
+│   Pipfile.lock
 │   LICENSE
 │   README
 │   requirements.txt    # Automatically installed by App Engine
@@ -49,6 +51,12 @@ Downloaded at 2000x2000, background removed, borders cut, downscaled to 256x256
 ### Run locally
 
 ```bash
-pip install -r requirements.txt
-uvicorn --port 8080 app:app --reload
+pipenv install
+pipenv run uvicorn --port 8888 app:app --reload
+```
+
+### Update dependencies
+
+```bash
+pipenv run pip freeze > requirements.txt
 ```
