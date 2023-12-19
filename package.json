@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "autoprefixer": "^10.4.16",
+    "bulma": "^0.9.4",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.69.5"
+  },
+  "scripts": {
+    "css-deploy": "npm run css-build && npm run css-postcss",
+    "css-build": "sass --no-source-map _sass/main.scss:css/styles.css",
+    "css-postcss": "postcss --use autoprefixer --output css/styles.css css/styles.css",
+    "css-watch": "npm run css-build -- --watch"
+  }
+}
