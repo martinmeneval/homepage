@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+@import "../node_modules/bulma/sass/utilities/initial-variables.sass";
+
+$cyan : #0bc;
+$cyan-invert : findColorInvert($cyan);
+
+$primary: $cyan;
+
+@import "../node_modules/bulma/bulma.sass";
+
+.title {
+    text-decoration: underline;
+    text-decoration-color: $primary;
+    text-underline-offset: 0.6rem;
+}
+
+.hero-body {
+    padding: 1.5rem 0.75rem;
+}
+
+.content li + li {
+    margin-top: 0em;
+}
