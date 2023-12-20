@@ -8,33 +8,33 @@ This is mostly intended at future Martin for when he'll want to update his websi
 
 ```bash
 homepage
-│   .gcloudignore
-│   .gitignore
-│   app.py
-│   app.yaml            # Run instructions for App Engine
-│   cloudbuild.yaml     # Default build steps for Cloud Build
-│   Pipfile
-│   Pipfile.lock
-│   LICENSE
-│   README
-│   requirements.txt    # Automatically installed by App Engine
-│
-├───static
-│   │   favicon.ico
-│   │   logo-smol.png
-│   │   logo.png
-│   │   qrcode-gh.png
-│   │   qrcode-home.png
-│   │   qrcode-li.png
-│   │   resume.pdf      # Don't forget to update :)
-│   │
-│   └───styles
-│           styles.css
-│
-└───templates
-        base.j2
-        home.j2
-        resume.j2
+├── LICENSE
+├── Pipfile
+├── Pipfile.lock
+├── README.md
+├── _sass
+│   └── main.scss       # Source stylesheet
+├── app.py
+├── app.yaml
+├── cloudbuild.yaml
+├── css
+│   └── styles.css      # Generated stylesheet
+├── package-lock.json
+├── package.json
+├── requirements.txt    # Automatically installed by App Engine
+├── static
+│   ├── favicon.ico
+│   ├── logo-smol.png
+│   ├── logo.png
+│   ├── qrcode-gh.png
+│   ├── qrcode-home.png
+│   ├── qrcode-li.png
+│   └── resume.pdf      # Don't forget to update :)
+└── templates
+    ├── base.j2
+    ├── home.j2
+    ├── resume.j2
+    └── resume_raw.j2
 ```
 
 ### Useful links
@@ -50,9 +50,23 @@ Downloaded at 2000x2000, background removed, borders cut, downscaled to 256x256
 
 ### Run locally
 
+#### App server
+
 ```bash
 pipenv install
 pipenv run uvicorn --port 8888 app:app --reload
+```
+
+#### Sass
+
+```bash
+npm run css-watch
+```
+
+### Deploy
+
+```bash
+npm run css-deploy
 ```
 
 ### Update dependencies
