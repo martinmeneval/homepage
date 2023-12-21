@@ -15,26 +15,20 @@ homepage
 ├── _sass
 │   └── main.scss       # Source stylesheet
 ├── app.py
-├── app.yaml
-├── cloudbuild.yaml
+├── app.yaml            # Run instructions for App Engine
+├── cloudbuild.yaml     # Default build steps for Cloud Build
 ├── css
-│   └── styles.css      # Generated stylesheet
+│   └── styles.css      # Compiled stylesheet
 ├── package-lock.json
 ├── package.json
 ├── requirements.txt    # Automatically installed by App Engine
 ├── static
 │   ├── favicon.ico
-│   ├── logo-smol.png
-│   ├── logo.png
-│   ├── qrcode-gh.png
-│   ├── qrcode-home.png
-│   ├── qrcode-li.png
 │   └── resume.pdf      # Don't forget to update :)
 └── templates
     ├── base.j2
     ├── home.j2
-    ├── resume.j2
-    └── resume_raw.j2
+    └── resume.j2
 ```
 
 ### Useful links
@@ -42,11 +36,9 @@ homepage
 [App Engine](https://console.cloud.google.com/appengine/services?authuser=1)  
 [Cloud Build](https://console.cloud.google.com/cloud-build/dashboard?authuser=1)  
 
-### QRCodes
+### QRCode
 
 Made on [QRCode Monkey](https://www.qrcode-monkey.com).  
-Color #0bc  
-Downloaded at 2000x2000, background removed, borders cut, downscaled to 256x256
 
 ### Run locally
 

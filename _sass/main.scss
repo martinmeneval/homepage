@@ -1,13 +1,31 @@
 @charset "utf-8";
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
 @import "../node_modules/bulma/sass/utilities/initial-variables.sass";
 
 $cyan : #0bc;
 $cyan-invert : findColorInvert($cyan);
 
-$primary: $cyan;
+$orange : #de927b;
+$orange-invert : findColorInvert($orange);
+$blue: #3E91DC;
+
+$primary: $orange;
+$link: $primary;
 
 @import "../node_modules/bulma/bulma.sass";
+
+.logo {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 4.25rem;
+    font-weight: 100;
+    color: $black;
+}
+
+.big-dot {
+    font-size: 6rem;
+    line-height: 0.5rem;
+    color: $primary;
+}
 
 .title {
     text-decoration: underline;
