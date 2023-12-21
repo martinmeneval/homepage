@@ -42,9 +42,23 @@ Made on [QRCode Monkey](https://www.qrcode-monkey.com).
 
 ### Run locally
 
+#### App server
+
 ```bash
 pipenv install
 pipenv run uvicorn --port 8888 app:app --reload
+```
+
+#### Sass
+
+```bash
+npm run css-watch
+```
+
+### Deploy
+
+```bash
+npm run css-deploy
 ```
 
 ### Update dependencies
