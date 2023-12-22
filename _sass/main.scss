@@ -26,8 +26,13 @@ $link: $primary;
     line-height: 0.5rem;
     color: $primary;
 }
+// level-item when inside of level-left
+.level-left .level-item {
+    justify-content: left;
+}
 
 .title {
+    justify-content: left;
     text-decoration: underline;
     text-decoration-color: $primary;
     text-underline-offset: 0.6rem;
