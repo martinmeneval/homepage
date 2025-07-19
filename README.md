@@ -9,8 +9,8 @@ This is mostly intended at future Martin for when he'll want to update his websi
 ```bash
 homepage
 ├── LICENSE
-├── Pipfile
-├── Pipfile.lock
+├── pyproject.toml       # Project metadata
+├── uv.lock
 ├── README.md
 ├── _sass
 │   └── main.scss       # Source stylesheet
@@ -45,8 +45,8 @@ Made on [QRCode Monkey](https://www.qrcode-monkey.com).
 #### App server
 
 ```bash
-pipenv install
-pipenv run uvicorn --port 8888 app:app --reload
+uv sync
+uv run uvicorn --port 8888 app:app --reload
 ```
 
 #### Sass
@@ -64,5 +64,5 @@ npm run css-deploy
 ### Update dependencies
 
 ```bash
-pipenv run pip freeze > requirements.txt
+uv export --format requirements.txt > requirements.txt
 ```
